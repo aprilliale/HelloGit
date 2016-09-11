@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         cbetc = (CheckBox) findViewById(R.id.cbetc);
         spinner = (Spinner) findViewById(R.id.spinner);
         ivGambar = (ImageView) findViewById(R.id.ivGambar);
-        buttonOk = (Button) findViewById(R.id.buttonOK);
+
 
         findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
             @Override
