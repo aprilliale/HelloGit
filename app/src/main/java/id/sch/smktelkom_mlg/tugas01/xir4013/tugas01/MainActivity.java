@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinner;
     Button buttonOk;
     ImageView ivGambar;
-    private String email;
+
 
 
     @Override
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         cbetc = (CheckBox) findViewById(R.id.cbetc);
         spinner = (Spinner) findViewById(R.id.spinner);
         ivGambar = (ImageView) findViewById(R.id.ivGambar);
+        buttonOk = (Button) findViewById(R.id.buttonOK);
 
         findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,12 +70,13 @@ public class MainActivity extends AppCompatActivity {
         boolean valid = true;
 
         String name = etName.getText().toString();
+        String email = etEmail.getText().toString();
 
         if(name.isEmpty()){
             etName.setError("Please fill the name!");
             valid =false;
         }
-        else if (this.email.isEmpty())
+        else if (email.isEmpty())
             {
                 etEmail.setError("Please fill the email!");
                 valid = false;
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
 
-        String hasil = null;
+        String hasil = "Your Registration has been sent!";
 
         if (rbMale.isChecked())
         {
@@ -101,10 +103,21 @@ public class MainActivity extends AppCompatActivity {
 
         if (hasil==null)
         {
-            tvhasil.setText("Belum Memilih Gender");
+            tvhasil.setText("Please fill it all");
+        }
+        else
+        {
+            tvhasil.setText("Your Registration has been sent!");
         }
 
+        if (cbHiphop.isChecked()) hasil+=cbHiphop.getText();
+        if (cbRnb.isChecked()) hasil+=cbRnb.getText();
+        if (cbEDM.isChecked()) hasil+=cbEDM.getText();
+        if (cbetc.isChecked()) hasil+=cbetc.getText();
+        if (hasil.isEmpty()) hasil+="No entri";
 
-        
+        StringBuilder builder = new StringBuilder();
+        builder.append(spinner.getSelectedItem().toString());
+
     }
 }
