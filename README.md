@@ -5,9 +5,11 @@ Tema : Form registration
 Tujuan : sebagai from untuk mendaftarkan ke sebuah agensi
 
 ##B. Identitas
-Nama : Erron Lolha Aprillia
-Kelas : XI RPL 4
-NO  : 13
+Nama : Erron Lolha Aprillia<br>
+Kelas : XI RPL 4<br>
+No : 13<br>
+NIS : 4705/1424.070<br>
+Sekolah : Telkom School Malang<br>
 
 ##C. Screenshoot
 ![ScreenShoot1](https://s10.postimg.org/i1vcj69qx/Screenshot_2016_09_12_07_17_49.png)
